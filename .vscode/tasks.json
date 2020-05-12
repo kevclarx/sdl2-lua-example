@@ -1,0 +1,36 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "C/C++: cl.exe build active file",
+			"command": "cl.exe",
+			"args": [
+				"/Zi",
+				"/I",
+				"${workspaceFolder}/3rd",
+				"/EHsc",
+				"/Fd:",
+				"${workspaceFolder}/build/debug/",
+				"/Fo:",
+				"${workspaceFolder}/build/debug/obj/",
+				"/Fe:",
+				"${workspaceFolder}/build/debug/game.exe",
+				"${workspaceFolder}/src/*.cpp",
+				"/link",
+				"/SUBSYSTEM:CONSOLE",
+				"${workspaceFolder}/3rd/SDL2/lib/SDL2.lib",
+				"${workspaceFolder}/3rd/SDL2/lib/SDL2main.lib",
+				"${workspaceFolder}/3rd/SDL2/lib/SDL2_image.lib",
+				"${workspaceFolder}/3rd/SDL2/lib/SDL2_ttf.lib"
+			],
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}
