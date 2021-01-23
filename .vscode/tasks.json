@@ -22,7 +22,8 @@
 				"${workspaceFolder}/3rd/SDL2/lib/SDL2.lib",
 				"${workspaceFolder}/3rd/SDL2/lib/SDL2main.lib",
 				"${workspaceFolder}/3rd/SDL2/lib/SDL2_image.lib",
-				"${workspaceFolder}/3rd/SDL2/lib/SDL2_ttf.lib"
+				"${workspaceFolder}/3rd/SDL2/lib/SDL2_ttf.lib",
+				"${workspaceFolder}/3rd/lua/lib/lua5.3.5.lib",
 			],
 			"problemMatcher": [
 				"$msCompile"

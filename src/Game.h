@@ -4,6 +4,7 @@
 #include "./Component.h"
 #include "./Entity.h"
 #include "./EntityManager.h"
+#include <lua/include/sol.hpp>
 #include <SDL2/include/SDL.h>
 #include <SDL2/include/SDL_image.h>
 #include <SDL2/include/SDL_ttf.h>

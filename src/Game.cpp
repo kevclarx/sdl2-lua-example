@@ -64,6 +64,14 @@ void Game::Initialize(int width, int height) {
 Entity &player(manager.AddEntity("chopper", PLAYER_LAYER));
 
 void Game::LoadLevel(int levelNumber) {
+    sol::state lua;
+    lua.open_libraries(sol::lib::base, sol::lib::os, sol::lib::math);
+    std::string levelName = "tiled-test-level";
+    sol::table levelData = lua.script_file("./assets/tilemaps/tiled-test-level.lua");
+    std::string version = levelData["version"];
+    std::cout << "Tiled map format version:" << version << std::endl;
+
+
     /* Start including new assets to the assetmanager list */
     assetManager->AddTexture("tank-image", std::string("./assets/images/tank-big-right.png").c_str());
     assetManager->AddTexture("chopper-image", std::string("./assets/images/chopper-spritesheet.png").c_str());
